@@ -1,3 +1,11 @@
 if install cpu:
-pip install tensorflow
+sudo pip install tensorflow
 if install gpu:
+Step 1:
+Install Nvidia Driver
+Step 2:
+Install Cuda 9.0
+Step 3:
+install Cudnn for Cuda 9.0
+Step 4 or Step 0:
+sudo pip install tensorflow-gpu
