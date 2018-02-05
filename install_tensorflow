@@ -1,11 +1,34 @@
-if install cpu:
+#a good reference script
+https://gist.github.com/morgangiraud/990cf65dcb27068a4ca6b9db4957acc7
+#if install cpu:
 sudo pip install tensorflow
-if install gpu:
-Step 1:
-Install Nvidia Driver
-Step 2:
-Install Cuda 9.0
-Step 3:
-install Cudnn for Cuda 9.0
-Step 4 or Step 0:
+
+
+#if install gpu:
+###Step 1:
+###Install Nvidia Driver
+driver >= nvidia-387 is best
+###to test if install good
+nvidia-smi
+###Step 2:
+###Install Cuda 9.0
+sudo bash cuda_8.0.61_375.26_linux.run
+###(a)choice when install:
+###(b)Define Bashrc File
+gedit ~/.bashrc
+###in bashrc file: add some libraries' paths related to cuda
+###(c)(option)test if driver fits this cuda, use cuda sample code
+https://gist.github.com/morgangiraud/990cf65dcb27068a4ca6b9db4957acc7
+###Step 3:
+###install Cudnn for Cuda 9.0
+###(a)extract
+###(b)copy to cuda folder
+cd cuda/
+sudo cp -r include/* /usr/local/cuda/include/
+sudo cp -r lib64/* /usr/local/cuda/lib64/
+###Step 4 or Step 0:
 sudo pip install tensorflow-gpu
+###Step 5
+###test if install successful
+source ~/bashrc
+import tensorflow as tf
