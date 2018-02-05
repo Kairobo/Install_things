@@ -1,0 +1,3 @@
+if install cpu:
+pip install tensorflow
+if install gpu:
